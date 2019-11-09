@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  tasks:
+    - name: provision an ec2 instance
+      ec2:
+       key_name: sandeepnew
+       instance_type: t2.micro
+       image: ami-01c3d31ea4584ec53
+       region: us-east-2
+       count: 1
+       vpc_subnet_id: subnet-05a2a73e5cd8795fa
+       assign_public_ip: yes
+  
